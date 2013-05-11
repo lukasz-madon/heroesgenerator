@@ -1,0 +1,56 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Carrois+Gothic+SC);
+
+body 
+{
+	font-family: 'Carrois Gothic SC', sans-serif;
+	/*background: #8acaf1;*/
+}
+div.centre
+{
+    width: 430px;
+    margin: 0 auto;
+	text-align: center;
+}
+.signupbox {
+  background: -webkit-linear-gradient(top, #ffffff 0, #dddddd 100%);
+  background: -moz-linear-gradient(top, #ffffff 0, #dddddd 100%);
+  background: -ms-linear-gradient(top, #ffffff 0, #dddddd 100%);
+  background: -o-linear-gradient(top, #ffffff 0, #dddddd 100%);
+  background: linear-gradient(top, #ffffff 0, #dddddd 100%);
+  border-left: solid 1px #eee;
+  border-right: solid 1px #eee;
+  border-bottom: solid 1px #ccc;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.share {
+    margin: 5px;
+    border-color: #29447e #29447e #1a356e;
+    color: #fff;
+    background-color: #5B74A8;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#637bad), to(#5872a7));
+    background-image: -moz-linear-gradient(#637bad, #5872a7);
+    background-image: -o-linear-gradient(#637bad, #5872a7);
+    background-image: linear-gradient(#637bad, #5872a7);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#637bad', EndColorStr='#5872a7'); /* for IE 6 - 9 */
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #8a9cc2;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #8a9cc2;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #8a9cc2;
+}
+
+.share:active {
+    border-color: #29447E;
+    background: #4F6AA3;
+    filter: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.signupbox input {
+	width:250px;
+}

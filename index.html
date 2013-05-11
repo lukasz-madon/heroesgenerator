@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Heroes of Might and Magic III</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<meta property="og:title" content="Heroes of Might and Magic III"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content="http://www.heroesgenerator.com/heroes.jpg"/>
+	<meta property="og:description" content="Heroes of Might and Magic III event generator."/>
+	<link rel="image_src" href="http://www.heroesgenerator.com/heroes.jpg" />
+	<script async="" src="http://www.google-analytics.com/analytics.js"></script>
+	<script src="script.js"></script>
+	<script src="base64binary.js"></script>
+</head>
+<body onLoad="drawCanvas();">
+<div id="fb-root"></div>
+	<div class="centre">
+		<h1>Heroes of Might and Magic III</h1>
+		<h2>Event generator</h2>
+		<canvas id="canvas" width="430" height="260">
+		   <p>We apologize, your browser does not support canvas at this time!</p>
+		</canvas>
+		<div class="signupbox">
+            <div><input type="text" id="toptext" placeholder="The month of the exams!" onkeyup="onKeyUp();"> </div>
+            <div><input type="text" id="bottomtext" placeholder="Student population decreases." onkeyup="onKeyUp();"> </div>
+			<div><button class="share" onclick="postCanvasToFacebook()">Share event on Facebook</button></div>
+		</div>
+		<br/>
+		<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<div class="fb-like" data-href="http://www.heroesgenerator.com/" data-send="true" data-width="450" data-show-faces="true"></div>
+		<div class="fb-comments" data-href="http://www.heroesgenerator.com/" data-width="430" data-num-posts="10"></div>
+	</div>
+	<script> <!-- google analytics -->
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-40790866-1', 'heroesgenerator.com');
+	  ga('send', 'pageview');
+	</script>
+</body>
+</html>
