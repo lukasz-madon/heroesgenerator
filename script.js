@@ -19,8 +19,8 @@ if ( XMLHttpRequest.prototype.sendAsBinary === undefined ) {
 window.fbAsyncInit = function() {
     FB.init({
       appId  : "404477149649756",
-      status : true, 
-      cookie : true, 
+      status : true,
+      cookie : true,
       xfbml  : true  // parse XFBML
     });
 };
@@ -28,7 +28,7 @@ window.fbAsyncInit = function() {
 function postImageToFacebook( authToken, filename, mimeType, imageData, message )
 {
     // this is the multipart/form-data boundary we'll use
-    var boundary = '----ThisIsTheBoundary1234567890';   
+    var boundary = '----ThisIsTheBoundary1234567890';
     // let's encode our image file, which is contained in the var
     var formData = '--' + boundary + '\r\n'
     formData += 'Content-Disposition: form-data; name="source"; filename="' + filename + '"\r\n';
@@ -42,7 +42,7 @@ function postImageToFacebook( authToken, filename, mimeType, imageData, message 
     formData += 'Content-Disposition: form-data; name="message"\r\n\r\n';
     formData += message + '\r\n'
     formData += '--' + boundary + '--\r\n';
-    
+
     var xhr = new XMLHttpRequest();
     xhr.open( 'POST', 'https://graph.facebook.com/me/photos?access_token=' + authToken, true );
     xhr.onload = xhr.onerror = function() {
@@ -72,7 +72,7 @@ function drawCanvas() {
 		context.fillText("Student population decreases.", centerX, 130);
 	};
 };
-function onKeyUp(e){ 
+function onKeyUp(e){
 	context.drawImage(img, 0, 0);
 	var topText = document.getElementById("toptext").value;
 	context.fillText(topText, centerX, 70);
@@ -85,16 +85,16 @@ function postCanvasToFacebook() {
 	var encodedPng = data.substring(data.indexOf(',') + 1, data.length);
 	var decodedPng = Base64Binary.decode(encodedPng);
 	FB.getLoginStatus(function(response) {
-	  if (response.status === "connected") {	
+	  if (response.status === "connected") {
 		postImageToFacebook(response.authResponse.accessToken, "heroesgenerator", "image/png", decodedPng, "www.heroesgenerator.com");
 	  } else if (response.status === "not_authorized") {
 		 FB.login(function(response) {
 			postImageToFacebook(response.authResponse.accessToken, "heroesgenerator", "image/png", decodedPng, "www.heroesgenerator.com");
-		 }, {scope: "publish_stream"});
+		 }, {scope: "publish_actions"});
 	  } else {
-		 FB.login(function(response)  { 
+		 FB.login(function(response)  {
 			postImageToFacebook(response.authResponse.accessToken, "heroesgenerator", "image/png", decodedPng, "www.heroesgenerator.com");
-		 }, {scope: "publish_stream"});
+		 }, {scope: "publish_actions"});
 	  }
 	 });
 
